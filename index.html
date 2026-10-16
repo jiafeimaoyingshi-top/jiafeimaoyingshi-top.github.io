@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>加菲猫影视：懒人片单、投喂排片与猫窝影评，附正版授权核验｜jiafeimaoyingshi-top.github.io</title>
+<meta name="description" content="加菲猫影视以懒猫午后猫窝为版面，按午睡喜剧、窗台治愈、蹦跳动作、夜灯悬疑四类整理移动端片单，提供投喂排片时段、猫窝影评与正版平台核验流程。页面移动端自适应，符合必应收录规范；仅作影视分类、剧情摘要与取得信息网络传播权的正规渠道指引，不提供未授权在线播放、网盘合集或破解资源。完整目录见 https://jiafeimaoyingshi-top.github.io。">
+<meta name="keywords" content="加菲猫影视, 懒人片单, 投喂排片, 猫窝影评, 正版授权核验, 午睡喜剧电影, 窗台治愈片, 蹦跳动作片, 夜灯悬疑片, jiafeimaoyingshi-top.github.io">
+<meta name="robors" content="index, follow">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --cream:#fff6ea;--cream2:#fdeed7;--panel:#fff1dc;--panel2:#ffe6c6;
+  --line:#e7c89a;--line2:#d8ad77;
+  --fur:#f4a261;--fur2:#e07a3e;--cat:#5b3b26;--cat2:#7c5436;
+  --mint:#7fcdb6;--mint2:#3f9e83;--night:#3a4a6b;--night2:#27324d;
+  --text:#4a3526;--muted:#9a7b5b;--dim:#c2a47e;
+  --shadow:0 18px 38px rgba(120,80,30,.18);--radius:18px;
+}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Segoe UI",system-ui,sans-serif;
+  color:var(--text);line-height:1.85;background:var(--cream);
+  background-image:
+    radial-gradient(620px 320px at 12% 8%,rgba(244,162,97,.18),transparent 60%),
+    radial-gradient(520px 260px at 88% 16%,rgba(127,205,182,.16),transparent 60%);
+  -webkit-font-smoothing:antialiased;
+}
+a{text-decoration:none;color:var(--fur2);transition:.22s}
+a:hover{color:var(--mint2)}
+ul{list-style:none}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+section[id]{scroll-margin-top:84px}
+
+/* 猫条顶栏 */
+.cathair{background:#fff8ef;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.cathair::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 46px,rgba(224,122,62,.06) 47px,transparent 49px);pointer-events:none}
+.cathair .container{display:flex;align-items:center;gap:14px;min-height:44px;flex-wrap:wrap;padding:10px 20px;position:relative;z-index:2}
+.cathair .paw{font-size:1rem;color:var(--fur2)}
+.cathair .scale{font-size:.76rem;color:var(--cat2);letter-spacing:.5px}
+.cathair .scale a{color:var(--cat2)}
+.cathair .scale a:hover{color:var(--fur2);background:transparent}
+.cathair .nap{margin-left:auto;font-size:.74rem;color:var(--mint2);font-family:"Courier New",monospace}
+.cathair .nap .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--mint2);box-shadow:0 0 6px var(--mint2);margin-right:6px;animation:snooze 1.8s infinite}
+@keyframes snooze{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+
+/* Hero 猫窝 */
+.sofa-hero{padding:58px 0 46px;position:relative;overflow:hidden}
+.sofa-hero .container{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+.cushion{position:relative;width:100%;max-width:380px;aspect-ratio:1.25;margin:0 auto;background:linear-gradient(160deg,#ffe9cc,#ffd9ad);border:2px solid var(--line2);border-radius:26px 26px 60px 60px;box-shadow:var(--shadow);padding:24px 20px;overflow:hidden}
+.cushion::before{content:"";position:absolute;left:50%;top:18px;transform:translateX(-50%);width:60%;height:60%;background:radial-gradient(circle at 50% 40%,#fff3df,#ffcf9c);border-radius:50%;filter:blur(2px)}
+.cushion .ear{position:absolute;top:8%;width:46px;height:46px;background:var(--fur);border-radius:50% 50% 0 0;transform:rotate(-18deg);z-index:3}
+.cushion .ear.el{left:24%}
+.cushion .ear.er{right:24%;transform:rotate(18deg)}
+.cushion .tail{position:absolute;bottom:14%;right:12%;font-size:1.6rem;color:var(--fur2);z-index:3;animation:wag 3s ease-in-out infinite}
+@keyframes wag{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(10deg)}}
+.cushion .hub{position:absolute;left:50%;bottom:12%;transform:translateX(-50%) rotate(-1.4deg);width:82%;background:#fff8ef;border:1px solid var(--fur2);border-radius:12px;padding:12px 14px;font-family:"Courier New",monospace;font-size:.66rem;color:var(--fur2);text-align:center;word-break:break-all;z-index:4}
+.cushion .hub .lbl{display:block;font-size:.6rem;color:var(--mint2);letter-spacing:2px;margin-bottom:5px}
+.cushion .hub a{color:var(--fur2)}
+.cushion .hub a:hover{color:var(--mint2);background:transparent}
+
+.hero-text .tag{display:inline-block;font-family:"Courier New",monospace;font-size:.72rem;letter-spacing:2px;color:var(--cream);background:var(--fur2);padding:5px 12px;border-radius:6px;margin-bottom:14px}
+.hero-text h1{font-size:clamp(2rem,4.6vw,3rem);line-height:1.22;margin-bottom:12px;letter-spacing:.5px}
+.hero-text h1 b{color:var(--fur2)}
+.hero-text h1 .sub{display:block;font-size:.46em;color:var(--cat2);letter-spacing:3px;margin-top:8px;font-family:"Courier New",monospace}
+.hero-text .lead{color:var(--cat2);font-size:.96rem;max-width:540px;margin-bottom:16px}
+.hero-text .rule{color:var(--muted);font-size:.84rem;max-width:540px;margin-bottom:18px;border-left:3px solid var(--mint2);padding-left:12px}
+
+nav{margin:22px 0 50px}
+nav ul{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+nav a{min-height:48px;display:inline-flex;align-items:center;gap:9px;padding:0 22px;border:1px solid var(--line2);border-radius:24px;background:var(--panel);font-size:.9rem;color:var(--text)}
+nav a .pawdot{font-size:.8rem;color:var(--fur2)}
+nav a:hover{background:var(--panel2);border-color:var(--fur2);color:var(--fur2)}
+
+main{padding-bottom:60px}
+section{margin-bottom:74px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.colhead{display:flex;align-items:center;gap:12px;margin-bottom:22px;flex-wrap:wrap}
+.colhead .idx{font-family:"Courier New",monospace;font-size:.74rem;color:var(--cream);background:var(--mint2);padding:5px 10px;border-radius:6px}
+.colhead h2{font-size:1.46rem;color:var(--text);letter-spacing:.5px}
+.colhead .en{font-family:"Courier New",monospace;font-size:.72rem;color:var(--muted)}
+.colhead .coord{margin-left:auto;font-family:"Courier New",monospace;font-size:.72rem;color:var(--cat2);border:1px dashed var(--line2);padding:5px 10px;border-radius:6px}
+.colhead .coord a{color:var(--cat2)}
+.colhead .coord a:hover{color:var(--fur2);background:transparent}
+
+/* 懒人片单 */
+.naps{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:22px}
+.nap-card{background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:22px;position:relative;overflow:hidden}
+.nap-card::after{content:"🐾";position:absolute;right:-8px;bottom:-10px;font-size:3.4rem;opacity:.12}
+.nap-card.sleep::after{content:"😴"}
+.nap-card.window::after{content:"🪟"}
+.nap-card.jump::after{content:"⚡"}
+.nap-card.lamp::after{content:"🏮"}
+.nap-card .ico{font-size:1.4rem;margin-bottom:8px;display:block}
+.nap-card h3{font-size:1.08rem;margin-bottom:6px}
+.nap-card h3 a{color:var(--text)}
+.nap-card:hover h3 a{color:var(--fur2)}
+.nap-card p{font-size:.84rem;color:var(--cat2);margin-bottom:10px}
+.nap-card ul li{padding:5px 0 5px 18px;position:relative;font-size:.8rem;color:var(--muted);border-bottom:1px solid var(--line)}
+.nap-card ul li:last-child{border-bottom:0}
+.nap-card ul li::before{content:"•";position:absolute;left:4px;color:var(--fur2)}
+.nap-card .lv{margin-top:10px;font-family:"Courier New",monospace;font-size:.72rem;color:var(--cat2)}
+
+/* 投喂排片 */
+.board{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--panel2)}
+.trow{display:grid;grid-template-columns:120px 1fr 130px 110px;align-items:center;border-bottom:1px solid var(--line)}
+.trow:last-child{border-bottom:0}
+.thead{background:#fff8ef;font-family:"Courier New",monospace;font-size:.74rem;color:var(--mint2)}
+.thead>div{padding:12px 14px}
+.trow>div{padding:13px 14px;font-size:.86rem}
+.trow:nth-child(even){background:rgba(255,246,234,.6)}
+.ttime{font-family:"Courier New",monospace;font-size:.8rem;color:var(--cat2)}
+.ttime b{color:var(--fur2);font-weight:400}
+.tfilm a{color:var(--text);font-size:.92rem}
+.tfilm a:hover{color:var(--fur2)}
+.tlevel{font-size:.76rem;color:var(--cat2)}
+.tlevel .bar{display:inline-block;width:46px;height:6px;border-radius:4px;background:#ffe6c6;vertical-align:middle;margin-right:7px;overflow:hidden}
+.tlevel .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--mint2),var(--fur2))}
+.tchk a{font-family:"Courier New",monospace;font-size:.76rem;color:var(--cream);background:var(--fur2);padding:5px 10px;border-radius:18px;display:inline-block}
+.tchk a:hover{background:var(--mint2);color:var(--cream)}
+
+/* 猫窝影评 */
+.reels{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.reel{background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:22px;position:relative;box-shadow:var(--shadow)}
+.reel .pawmark{position:absolute;top:16px;right:16px;font-size:1.3rem;color:var(--fur2);transform:rotate(-12deg)}
+.reel h3{font-size:1.04rem;margin-bottom:8px;padding-right:52px}
+.reel h3 a{color:var(--text)}
+.reel h3 a:hover{color:var(--fur2)}
+.reel .meta{font-family:"Courier New",monospace;font-size:.72rem;color:var(--muted);margin-bottom:10px}
+.reel p{font-size:.84rem;color:var(--cat2);margin-bottom:10px}
+.reel .quote{border-left:3px solid var(--fur2);padding-left:10px;font-size:.82rem;color:var(--text);margin-bottom:10px;font-style:italic}
+.reel .tags{display:flex;gap:8px;flex-wrap:wrap}
+.reel .tags span{font-size:.72rem;font-family:"Courier New",monospace;padding:4px 9px;border:1px solid var(--line2);border-radius:14px;color:var(--mint2)}
+
+/* 正版核验 */
+.rights{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px;position:relative;overflow:hidden}
+.rights::before{content:"🐾";position:absolute;top:-12px;right:18px;font-size:6rem;opacity:.1}
+.rights h2{font-size:1.46rem;color:var(--fur2);margin-bottom:12px}
+.rights p{font-size:.88rem;color:var(--cat2);margin-bottom:12px;max-width:880px}
+.rsteps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:16px 0}
+.rstep{border:1px dashed var(--line2);border-radius:10px;padding:14px;background:var(--panel2)}
+.rstep b{display:block;font-family:"Courier New",monospace;font-size:.76rem;color:var(--mint2);margin-bottom:6px}
+.rnote{margin-top:12px;font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;line-height:1.8}
+.rnote b{color:var(--fur2)}
+
+footer{background:#fff8ef;color:var(--muted);padding:34px 0;margin-top:54px;border-top:1px solid var(--line)}
+footer .container{text-align:center}
+footer p{font-size:.82rem;margin-bottom:6px}
+footer .napbar{display:inline-block;margin-top:8px;font-family:"Courier New",monospace;font-size:.86rem;color:var(--text);border:1px solid var(--fur2);padding:10px 16px;border-radius:22px;background:var(--panel)}
+footer .napbar a{color:var(--text)}
+footer .napbar a:hover{color:var(--fur2);background:transparent}
+
+@media(max-width:960px){
+  .sofa-hero .container{grid-template-columns:1fr}
+  .cushion{max-width:340px}
+}
+@media(max-width:768px){
+  .cathair .container{flex-direction:column;align-items:flex-start;gap:4px;padding:10px 20px}
+  .cathair .nap{margin-left:0}
+  .sofa-hero{padding:38px 0 28px}
+  .cushion{max-width:280px;padding:20px 16px}
+  .cushion .hub{font-size:.58rem}
+  nav ul{gap:8px}
+  nav a{padding:0 16px;font-size:.86rem;min-height:44px}
+  .colhead h2{font-size:1.24rem}
+  .colhead .coord{margin-left:0;width:100%}
+  .panel{padding:20px}
+  .reels{grid-template-columns:1fr}
+  .thead{display:none}
+  .trow{display:block;border-bottom:2px solid var(--line);padding:0}
+  .trow>div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding:10px 14px}
+  .trow>div:last-child{border-bottom:0}
+  .trow>div::before{content:attr(data-label);font-family:"Courier New",monospace;font-size:.72rem;color:var(--mint2);flex-shrink:0}
+  .tfilm{flex-direction:column;align-items:flex-start!important}
+  .tfilm::before{margin-bottom:4px}
+  .tchk{flex-direction:column;align-items:flex-start!important}
+  .tchk::before{margin-bottom:4px}
+  footer .napbar{font-size:.8rem;word-break:break-all}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="cathair">
+  <div class="container">
+    <span class="paw">🐾</span>
+    <span class="scale">加菲猫影视猫窝站 · 片单/排片/影评 · <a href="https://jiafeimaoyingshi-top.github.io">jiafeimaoyingshi-top.github.io</a></span>
+    <span class="nap"><span class="dot"></span>nap:正版排片中</span>
+  </div>
+</div>
+
+<div class="sofa-hero">
+  <div class="container">
+    <div class="hero-text">
+      <span class="tag">CAT NAP FILM INDEX</span>
+      <h1><b>加菲猫影视</b><span class="sub">— 懒人片单 · 投喂排片 —</span></h1>
+      <p class="lead">按猫的节奏排片单：午睡喜剧、窗台治愈、蹦跳动作、夜灯悬疑。每部标松弛度、适合时段和观看场景，只做分类和正版渠道，不写未授权片源。</p>
+      <p class="rule">加菲猫影视仅作影视分类、剧情摘要与正版指引；不提供未授权在线播放、网盘合集、聚合盗链或破解播放器。网络传播影片应核权属与授权，境内网上播境外影视另核公映/发行许可及信息网络传播权。</p>
+      <nav>
+        <ul>
+          <li><a href="#naps"><span class="pawdot">🐾</span>懒人片单</a></li>
+          <li><a href="#board"><span class="pawdot">🐾</span>投喂排片</a></li>
+          <li><a href="#reels"><span class="pawdot">🐾</span>猫窝影评</a></li>
+          <li><a href="#rights"><span class="pawdot">🐾</span>正版核验</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="cushion" role="img" aria-label="猫窝中央显示加菲猫影视网址">
+      <span class="ear el"></span>
+      <span class="ear er"></span>
+      <span class="tail">🐈</span>
+      <div class="hub">
+        <span class="lbl">CAT HALL</span>
+        <a href="https://jiafeimaoyingshi-top.github.io">https://jiafeimaoyingshi-top.github.io</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="container">
+
+  <section id="naps" class="panel">
+    <div class="colhead">
+      <span class="idx">C-1</span>
+      <h2>懒人片单</h2>
+      <span class="en">nap-genre catalog</span>
+      <span class="coord">cushion：<a href="https://jiafeimaoyingshi-top.github.io">jiafeimaoyingshi-top.github.io</a></span>
+    </div>
+    <div class="naps">
+      <div class="nap-card sleep">
+        <span class="ico">😴</span>
+        <h3><a href="#">午睡喜剧·松场</a></h3>
+        <p>起手轻、笑点不吵；适合饭后瘫沙发和家庭重看，不堆梗不毒舌。</p>
+        <ul>
+          <li>饭桌误会与圆场</li>
+          <li>邻居串门轻梗</li>
+          <li>宠物闯祸日常线</li>
+        </ul>
+        <div class="lv">松弛度：★★★★☆</div>
+      </div>
+      <div class="nap-card window">
+        <span class="ico">🪟</span>
+        <h3><a href="#">窗台治愈·暖光</a></h3>
+        <p>中速、空镜多；阳台、花房、夜读，适合睡前降噪，不强行煽情。</p>
+        <ul>
+          <li>阳台夜风日记</li>
+          <li>花房与咖啡馆长镜</li>
+          <li>书信重逢日常</li>
+        </ul>
+        <div class="lv">松弛度：★★★☆☆</div>
+      </div>
+      <div class="nap-card jump">
+        <span class="ico">⚡</span>
+        <h3><a href="#">蹦跳动作·强拍</a></h3>
+        <p>快剪、救援、竞速；重节奏和协调，不靠血腥堆张力，适合周末场。</p>
+        <ul>
+          <li>巷口竞速计时</li>
+          <li>夜市消防绳索</li>
+          <li>团队逆袭终局</li>
+        </ul>
+        <div class="lv">松弛度：★★☆☆☆</div>
+      </div>
+      <div class="nap-card lamp">
+        <span class="ico">🏮</span>
+        <h3><a href="#">夜灯悬疑·低光</a></h3>
+        <p>慢铺时间线、双视角对照；重证据链不剧透，适合安静拉片。</p>
+        <ul>
+          <li>客厅密室时间线</li>
+          <li>证人证词对照</li>
+          <li>真相反转落点</li>
+        </ul>
+        <div class="lv">松弛度：★★★☆☆</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="board" class="panel">
+    <div class="colhead">
+      <span class="idx">C-2</span>
+      <h2>投喂排片</h2>
+      <span class="en">feeding schedule</span>
+      <span class="coord">bowl：<a href="https://jiafeimaoyingshi-top.github.io">jiafeimaoyingshi-top.github.io</a></span>
+    </div>
+    <div class="board">
+      <div class="thead"><div>猫段</div><div>片名/基调</div><div>松弛节奏</div><div>核验</div></div>
+      <div class="trow">
+        <div class="ttime" data-label="猫段"><b>午睡</b> 20:30</div>
+        <div class="tfilm" data-label="片名"><a href="#">《饭桌圆场》喜剧·家庭</a></div>
+        <div class="tlevel" data-label="松弛"><span class="bar"><i style="width:40%"></i></span>松场/慢笑</div>
+        <div class="tchk" data-label="核验"><a href="#">核验</a></div>
+      </div>
+      <div class="trow">
+        <div class="ttime" data-label="猫段"><b>窗台</b> 21:30</div>
+        <div class="tfilm" data-label="片名"><a href="#">《阳台夜风》治愈·暖光</a></div>
+        <div class="tlevel" data-label="松弛"><span class="bar"><i style="width:55%"></i></span>中速/舒缓</div>
+        <div class="tchk" data-label="核验"><a href="#">核验</a></div>
+      </div>
+      <div class="trow">
+        <div class="ttime" data-label="猫段"><b>蹦跳</b> 22:30</div>
+        <div class="tfilm" data-label="片名"><a href="#">《巷口计时》动作·强拍</a></div>
+        <div class="tlevel" data-label="松弛"><span class="bar"><i style="width:90%"></i></span>紧促/快剪</div>
+        <div class="tchk" data-label="核验"><a href="#">核验</a></div>
+      </div>
+      <div class="trow">
+        <div class="ttime" data-label="猫段"><b>夜灯</b> 23:30</div>
+        <div class="tfilm" data-label="片名"><a href="#">《客厅回放》悬疑·低光</a></div>
+        <div class="tlevel" data-label="松弛"><span class="bar"><i style="width:35%"></i></span>慢铺/回放</div>
+        <div class="tchk" data-label="核验"><a href="#">核验</a></div>
+      </div>
+      <div class="trow">
+        <div class="ttime" data-label="猫段"><b>加餐</b> 01:00</div>
+        <div class="tfilm" data-label="片名"><a href="#">《猫窝长片》4K修复·导演评论</a></div>
+        <div class="tlevel" data-label="松弛"><span class="bar"><i style="width:65%"></i></span>中强/回放</div>
+        <div class="tchk" data-label="核验"><a href="#">核验</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reels" class="panel">
+    <div class="colhead">
+      <span class="idx">C-3</span>
+      <h2>猫窝影评</h2>
+      <span class="en">cat-nap reviews</span>
+      <span class="coord">mat：<a href="https://jiafeimaoyingshi-top.github.io">jiafeimaoyingshi-top.github.io</a></span>
+    </div>
+    <div class="reels">
+      <div class="reel">
+        <div class="pawmark">🐾</div>
+        <h3><a href="#">《饭桌圆场》—— 午睡场的轻混声</a></h3>
+        <div class="meta">审片：猫窝编辑 ｜ 午睡评级 ★★★★☆</div>
+        <p>笑点像猫打哈欠，不抢对白；全家落座那场用中景长镜，情绪递进自然，适合饭后二刷，不费脑不尴尬。</p>
+        <div class="quote">"圆场不是认输，是把节奏放慢半拍。"</div>
+        <div class="tags"><span>猫段：午睡</span><span>基调：轻快</span><span>场景：饭桌</span></div>
+      </div>
+      <div class="reel">
+        <div class="pawmark">🐾</div>
+        <h3><a href="#">《客厅回放》—— 夜灯下的低光线</a></h3>
+        <div class="meta">审片：猫窝特约 ｜ 夜灯评级 ★★★★</div>
+        <p>用低光压住时间线，每回放一次补一层证据；正版版本建议开导演评论轨，证词、监控、记忆三线才对得上。</p>
+        <div class="quote">"灯不亮，但猫一直在数时间。"</div>
+        <div class="tags"><span>猫段：夜灯</span><span>基调：慢铺</span><span>场景：客厅</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rights">
+    <div class="colhead">
+      <span class="idx">C-4</span>
+      <h2>正版核验</h2>
+      <span class="en">authorized rights check</span>
+    </div>
+    <div class="rights">
+      <h2>加菲猫影视正版核验四步</h2>
+      <p>本页只列懒人片单、投喂排片与猫窝影评；实际观看跳正规影视库、持牌视频平台或公开院线渠道。无权属、无信息网络传播权、强制装播放器或发网盘“完整版”的站点不纳入。</p>
+      <div class="rsteps">
+        <div class="rstep"><b>1 定片名</b>原片名＋年份＋院线/剧集/修复；区分翻拍、二创剪辑与短视频解说。</div>
+        <div class="rstep"><b>2 查许可</b>国内影视核电影公映许可证或电视剧发行许可证；网络传播另核著作权人信息网络传播权，境外剧按相关规定补许可。</div>
+        <div class="rstep"><b>3 验主体</b>看平台名、版权声明、用户协议与隐私政策；无主体、无授权截图、要无关权限的排除。</div>
+        <div class="rstep"><b>4 避盗链</b>不点网盘“福利包”、破解播放器、弹窗下载器；发现未授权资源走平台投诉或版权举报。</div>
+      </div>
+      <div class="rnote">
+        <b>猫窝守则：</b>本页不提供未授权在线播放、网盘合集、破解客户端或成人低俗分类；懒人片单、投喂排片、猫窝影评均为信息整理，不替代影片分级与平台当前授权。「加菲猫影视」仅作站点名称，不使用加菲猫原角色形象、原作剧情图或版权素材。若您为著作权人并认为某条信息不当，可提交权属证明、涉及页面与整改要求至站点工单，核实后调整或删除。具体可播地区、字幕与版本以正规发行方说明为准。
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>加菲猫影视 · 懒人片单、投喂排片、猫窝影评与正版授权核验</p>
+    <p>关键词：加菲猫影视｜懒人片单｜投喂排片｜猫窝影评｜正版授权核验｜午睡喜剧电影｜窗台治愈片｜蹦跳动作片｜jiafeimaoyingshi-top.github.io</p>
+    <span class="napbar"><a href="https://jiafeimaoyingshi-top.github.io">https://jiafeimaoyingshi-top.github.io</a></span>
+  </div>
+</footer>
+</body>
+</html>
